@@ -26,7 +26,6 @@ const BarcodeScannerComponent: FunctionComponent = () => {
   };
 
   const searchForBarcode = (barcode: string) => {
-    console.log("BAR", barcode);
     setSearchState("searching");
     let product = undefined;
     priceList.map((item: any) => {

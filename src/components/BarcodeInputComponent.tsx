@@ -20,14 +20,15 @@ const BarcodeInputComponent: FunctionComponent<BarcodeInputComponentProps> = ({
         <input
           className="rounded text-black"
           type="number"
+          min={1}
           value={barcodeInput}
           name="barcode"
           onInput={barcodeInputHandler}
         />
       </div>
-      <div className="flex justify-center">
+      <div className="flex justify-center p-4">
         <button
-          className="bg-blue-700 hover:bg-blue-500 p-4 rounded "
+          className="bg-blue-700 hover:bg-blue-500 p-4 rounded"
           onClick={() => {
             searchForBarcode(barcodeInput);
           }}

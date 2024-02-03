@@ -1,19 +1,15 @@
 import jsPDF, { jsPDFOptions } from "jspdf";
 
 export const printPrice = (price: string) => {
-  const formattedPrice = Math.ceil(parseInt(price));
-  //   const options: jsPDFOptions = {
-  //     orientation: "landscape",
-  //     unit: "cm",
-  //     format: [7, 2],
-  //   };
+  const formattedPrice = Math.round(parseInt(price));
+  const width = formattedPrice.toString().length * 7 + 28;
+  const formatArray = [width, 20];
   const doc = new jsPDF({
     orientation: "landscape",
-    unit: "cm",
-    format: [5, 2],
+    unit: "px",
+    format: formatArray,
   });
-  doc.text(`${formattedPrice} HUF`, 1, 1);
-  console.log(doc);
-  //doc.autoPrint();
+  doc.text(`${formattedPrice} HUF`, 1, 15);
+  doc.autoPrint();
   doc.output("dataurlnewwindow");
 };

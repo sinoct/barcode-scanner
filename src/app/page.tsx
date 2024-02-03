@@ -12,7 +12,7 @@ const Home: NextPage = async () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="p-4">
-        <div className="text-3xl flex justify-center py-8 pb-32 text-center">
+        <div className="text-3xl flex justify-center py-8 pb-8 text-center">
           Barcode Scanner
         </div>
         <div>
